@@ -1,0 +1,42 @@
+{
+ "slug": "reel-01-three-things",
+ "project": "project",
+ "spec": "spec.py",
+ "ghost": "NOTE",
+ "cam_y": "40%",
+ "footage": null,
+ "caption_fixes": {
+  "words": {
+   "ok.": "OK.",
+   "Ok.": "OK."
+  }
+ },
+ "heygen": {
+  "type": "avatar",
+  "avatar_id": "your-avatar-look-id",
+  "voice_id": "your-heygen-voice-id",
+  "voice_settings": {
+   "speed": 1.0
+  },
+  "engine": {
+   "type": "avatar_iv"
+  },
+  "aspect_ratio": "9:16",
+  "resolution": "1080p",
+  "brand_glossary_id": "your-glossary-id",
+  "tts": {
+   "pitch_variance": 1.8,
+   "seed": 7,
+   "speed": 1.2
+  }
+ },
+ "cover": {
+  "top": "cover/top.png",
+  "left": "cover/left.png",
+  "right": "cover/right.png",
+  "bg": "cover/bg.png",
+  "tag": "FREE TEMPLATE",
+  "line1": "Give your AI",
+  "line2": "these three things."
+ }
+}

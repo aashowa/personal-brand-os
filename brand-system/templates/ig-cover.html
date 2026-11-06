@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>IG cover 1080x1920</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* Words sit in the middle 1080x1350 band so the profile grid crop keeps them. Max 5 words, one <mark>.
+     Replace @yourhandle; put a photo of you at assets/photo.jpg. */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1920px; background: #F7F7F5; color: #111; font-family: 'Bricolage Grotesque', sans-serif; overflow: hidden; position: relative; }
+  .top { position: absolute; top: 330px; left: 80px; right: 80px; }
+  .tag { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 34px; padding: 10px 20px; border-radius: 10px; color: #fff; display: inline-block; }
+  .r { background: #C4501B; } .a { background: #2251D1; }
+  .words { font-weight: 800; font-size: 150px; line-height: 0.98; letter-spacing: -0.035em; margin-top: 36px; }
+  mark { background: #FFD43B; color: inherit; padding: 0 0.08em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .photo { position: absolute; left: 0; right: 0; bottom: 0; width: 1080px; height: 1000px; object-fit: cover; object-position: 50% 25%; }
+  .handle { position: absolute; top: 250px; left: 80px; font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 32px; color: #6B6B6B; }
+</style></head>
+<body>
+  <div class="handle">@yourhandle</div>
+  <div class="top">
+    <span class="tag r">Side A</span>
+    <div class="words">Your hook <mark>goes here.</mark></div>
+  </div>
+  <img class="photo" src="assets/photo.jpg" alt="">
+</body></html>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Palmier + HyperFrames Video"
+  short_description: "Raw footage to finished video in Palmier, with automatic gates"
+  default_prompt: "Use $palmier-hyperframes-video to edit this footage into a finished branded social video, preserving approved edits and using generated assets only where they help."

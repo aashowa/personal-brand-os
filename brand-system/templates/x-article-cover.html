@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>X article cover 1500x600</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* 5:2 cover for X articles. Art: your own image at assets/x-article-art.png (1500x600, left 40% kept empty; without it the cover is plain paper).
+     Edit .words (max 4 words, one <mark>) and .topics. */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1500px; height: 600px; background: #F7F7F5 url(assets/x-article-art.png) center / cover no-repeat; color: #111; font-family: 'Bricolage Grotesque', sans-serif; overflow: hidden; position: relative; }
+  .text { position: absolute; left: 72px; top: 0; bottom: 0; width: 540px; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .words { font-weight: 800; font-size: 96px; line-height: 0.98; letter-spacing: -0.035em; }
+  mark { background: #FFD43B; color: inherit; padding: 0 0.08em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .tags { display: flex; gap: 12px; }
+  .tag { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 24px; padding: 7px 15px; border-radius: 8px; color: #fff; }
+  .r { background: #C4501B; } .a { background: #2251D1; }
+  .topics { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 26px; color: #6B6B6B; }
+</style></head>
+<body>
+  <div class="text">
+    <div class="tags"><span class="tag r">Side A</span><span class="tag a">Side B</span></div>
+    <div class="words">Four<br>words,<br><mark>one mark.</mark></div>
+    <div class="topics">Topic · Topic · Topic</div>
+  </div>
+</body></html>

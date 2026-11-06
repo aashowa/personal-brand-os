@@ -1,0 +1,46 @@
+# secrets and personal settings
+.env
+.env.*
+!.env.example
+config.json
+*.pem
+*token*.json
+credentials*.json
+client_secret*.json
+
+# your content and run state
+episodes/*
+!episodes/README.md
+system/schedule-ledger.json
+site/library.json
+site/.vercel/
+research/**/seen.json
+research/radar/20*.md
+research/growth/*.csv
+research/growth/log.md
+research/retention/REPORT.md
+research/retention/data/
+
+# media and renders
+*.mp4
+*.mov
+*.m4a
+*.wav
+renders/
+out/
+
+# tooling
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+node_modules/
+.DS_Store
+research/outliers/*/
+research/outliers/watchlist.json
+research/packaging/*/
+research/packaging/creators.json
+.tmp/
+site/index.html
+site/*.jpg
+site/*.png

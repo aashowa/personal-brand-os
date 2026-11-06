@@ -1,0 +1,51 @@
+/* LinkedIn creatives: one 1080x1350 <section class="slide"> per image, paper and ink (brand-system/brand-sheet.html). */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&family=JetBrains+Mono:wght@500;700&display=block");
+
+:root {
+  --paper: #F7F7F5; --paper-2: #EFEFEB; --line: #DCDCD6;
+  --ink: #111111; --pencil: #6B6B6B; --marker: #FFD43B;
+  --rest: #C4501B; --rest-tint: #F6E3D8; --agency: #2251D1; --agency-tint: #DDE5FA;
+  --mono: 'JetBrains Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #ccc; font-family: 'Bricolage Grotesque', system-ui, sans-serif; color: var(--ink); }
+
+.slide { width: 1080px; height: 1350px; position: relative; overflow: hidden; background: var(--paper);
+  padding: 92px 84px 130px; display: flex; flex-direction: column; gap: 40px; margin-bottom: 20px; }
+
+/* top label; no footer (no branding on the graphic; .foot markup in older linkedin.html files stays hidden) */
+.label { font: 700 22px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--pencil); }
+.foot { display: none; }
+
+/* type */
+h1 { font-weight: 800; font-size: 132px; line-height: .95; letter-spacing: -.045em; text-wrap: balance; }
+h2 { font-weight: 800; font-size: 92px; line-height: 1; letter-spacing: -.04em; text-wrap: balance; }
+h3 { font-weight: 800; font-size: 50px; line-height: 1.1; letter-spacing: -.02em; }
+p, li { font-size: 42px; line-height: 1.28; }
+.small { font-size: 34px; color: var(--pencil); }
+.hl { position: relative; display: inline-block; z-index: 0; }
+.hl::before { content: ""; position: absolute; z-index: -1; left: -.06em; right: -.08em; top: .16em; bottom: .02em;
+  background: var(--marker); transform: rotate(-1.2deg); border-radius: 4px; }
+code, .mono { font-family: var(--mono); font-weight: 500; }
+
+/* boxes */
+.box { background: #fff; border: 3px solid var(--ink); border-radius: 18px; box-shadow: 8px 8px 0 var(--ink); padding: 38px 42px; }
+.box.y { background: var(--marker); }
+.box.r { background: var(--rest-tint); }
+.box.dark { background: var(--ink); color: var(--paper); box-shadow: 8px 8px 0 var(--marker); }
+.num { font: 700 30px var(--mono); color: var(--pencil); }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.row { display: flex; gap: 24px; align-items: center; }
+.stack { display: flex; flex-direction: column; gap: 22px; }
+.arrow { font: 800 56px 'Bricolage Grotesque'; line-height: 1; }
+.tick { display: grid; grid-template-columns: 56px 1fr; gap: 20px; align-items: start; font-size: 40px; line-height: 1.25; }
+.tick::before { content: ""; width: 44px; height: 44px; border: 3px solid var(--ink); border-radius: 8px; background: #fff; margin-top: 2px; }
+.x { color: var(--rest); font-weight: 800; }
+
+/* content block that fills the space between the headline and the footer */
+.fill { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; gap: 28px; }
+.box.tight { padding: 20px 30px; } .box.tight p { font-size: 38px; }
+/* Excalidraw diagram filling the space under the title */
+.fig { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
+.fig img { max-width: 100%; max-height: 100%; }
+.cap { font-size: 38px; text-align: center; margin-bottom: 18px; }

@@ -1,0 +1,28 @@
+{
+ "_notes": "Example only: every path is relative to this file (put it in episodes/<slug>/shorts/). export is the privacy-blurred 1x Palmier export of the same timeline; edl times are 1x timeline seconds from `shorts.py transcript`.",
+ "timeline": "_build/data/timeline.json",
+ "words": "_build/data/words-source.json",
+ "voice": "../edit/media/screen_h264_polished.mov",
+ "camera": "../edit/media/camera_1080_smooth.mp4",
+ "camera_offset": -2,
+ "camera_crop": [495, 180, 1012, 900],
+ "repaired": "_build/data/camera-repaired-ranges.json",
+ "lut": "_build/grade.cube",
+ "export": "../edit/export/v1-1x.mp4",
+ "terms": "../edit/terms.txt",
+ "speed": 1.1,
+ "fps": 30,
+ "longform": {"file": "../final.mp4", "title": "Episode title"},
+ "caption_fixes": {
+  "words": {"concepts": "context"},
+  "phrases": [["google .com,", "google.com,"], ["Google my business profile", "Google Business Profile"]]
+ },
+ "shorts": {
+  "s1-before-after": {
+   "ghost": "2 MIN",
+   "file": "short-1-before-after",
+   "title": "Short 1 - The Weekly Report in 2 Minutes",
+   "edl": [[504.83, 513.05], [490.88, 493.3], [495.07, 501.55], [517.09, 523.35], [528.07, 541.33], [547.92, 556.3]]
+  }
+ }
+}

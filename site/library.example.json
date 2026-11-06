@@ -1,0 +1,20 @@
+{
+ "_how": "Copy to library.json. Newest first. kits = starter kits from long-form episodes, one card each: tag (a key of site.chips in config.json), tab (the folder-tab label), blurb, optional meta (small grey line), optional code (a terminal-style snippet: '> ' lines are prompts, '#' lines are headings, ' # ' starts a comment), optional wide (a card across both columns), link (stays behind the email box). tools = repos and apps from your Reels, one list. Then: python3 site/publish.py --deploy",
+ "kits": [
+  {
+   "title": "Your first starter kit",
+   "tag": "general",
+   "tab": "starter-kit/",
+   "blurb": "One or two plain sentences: what the file does, who it is for, and what they get after one message.",
+   "code": "> set me up\n✓ done in one message",
+   "link": "https://example.com/your-shared-folder"
+  }
+ ],
+ "tools": [
+  {
+   "name": "A free tool from a Reel",
+   "blurb": "One line on what it does for the viewer.",
+   "link": "https://example.com/the-tool"
+  }
+ ]
+}

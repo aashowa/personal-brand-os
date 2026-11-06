@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Brand Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #F7F7F5; --paper-2: #EFEFEB; --line: #DCDCD6;
+    --ink: #111111; --pencil: #6B6B6B; --marker: #FFD43B;
+    /* --rest = side A (warm), --agency = side B (cool). Every template in the kit uses these two names. */
+    --rest: #C4501B; --rest-tint: #F6E3D8;
+    --agency: #2251D1; --agency-tint: #DDE5FA;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 18px; line-height: 1.5; }
+  .page { max-width: 1440px; margin: 0 auto; padding: 72px 64px 96px; }
+  .mono { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+  .label { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pencil); }
+  mark { background: var(--marker); color: inherit; padding: 0 0.12em; }
+  h1 { font-weight: 800; font-size: 120px; line-height: 0.95; letter-spacing: -0.03em; }
+  h2 { font-weight: 800; font-size: 40px; letter-spacing: -0.02em; margin-bottom: 24px; }
+  section { border-top: 1px solid var(--line); padding-top: 40px; margin-top: 56px; }
+  .grid { display: grid; gap: 20px; }
+  .g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .card { background: var(--paper-2); border-radius: 10px; padding: 24px; }
+  .sw { height: 120px; border-radius: 8px; border: 1px solid var(--line); margin-bottom: 14px; }
+  .sw-name { font-weight: 800; font-size: 22px; }
+  .sw-use { font-size: 16px; color: var(--pencil); margin-top: 6px; }
+  .tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 14px; padding: 4px 10px; border-radius: 6px; color: #fff; }
+  .tag.r { background: var(--rest); } .tag.a { background: var(--agency); }
+  .do, .dont { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 13px; letter-spacing: 0.12em; }
+  .do { color: #2E7D32; } .dont { color: var(--rest); }
+  ul.rules { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  ul.rules li { padding-left: 22px; position: relative; }
+  ul.rules li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 12px; height: 3px; background: var(--ink); }
+  .spec { font-weight: 800; font-size: 72px; line-height: 1; letter-spacing: -0.02em; }
+  .mini { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; aspect-ratio: 16 / 9; padding: 22px 26px; display: flex; flex-direction: column; justify-content: space-between; }
+  .mini .h { font-weight: 800; font-size: 30px; line-height: 1.08; letter-spacing: -0.02em; }
+  img.diagram { width: 100%; border: 1px solid var(--line); border-radius: 10px; display: block; background: var(--paper); }
+  .serif { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+  /* studio canvas: the 1920x1080 video numbers, scaled with the box (1cqw = 19.2 px at 1920) */
+  .studio { container-type: inline-size; position: relative; aspect-ratio: 16 / 9; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background:
+    radial-gradient(60% 80% at -6% 106%, rgba(196,80,27,.36), rgba(196,80,27,0) 68%),
+    radial-gradient(60% 80% at 106% 106%, rgba(34,81,209,.30), rgba(34,81,209,0) 68%),
+    radial-gradient(73% 83% at 50% -10%, rgba(255,255,255,.65), rgba(255,255,255,0) 70%), var(--paper); }
+  .studio > * { position: absolute; }
+  .float { background: #fff; border-radius: 1.46cqw; box-shadow: 0 0 0 1px rgba(17,17,17,.06), 0 1.25cqw 3.1cqw rgba(17,17,17,.14), 0 .1cqw .3cqw rgba(17,17,17,.06); }
+  @media (max-width: 900px) { .g2, .g3, .g4 { grid-template-columns: 1fr; } h1 { font-size: 72px; } .spec { font-size: 44px; } .page { padding: 40px 16px; } .mono, li { overflow-wrap: anywhere; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Your brand sheet. Replace "Your Name", "@yourhandle" and the one-line promise; keep or change the tokens in :root. -->
+  <div class="label">Personal brand · YouTube + Instagram</div>
+  <h1 style="margin-top:20px"><mark>Your Name</mark></h1>
+  <div class="mono" style="margin-top:14px;color:var(--pencil);font-size:20px">@yourhandle</div>
+  <p style="margin-top:28px;font-size:26px;max-width:980px">One line on what you teach and who it helps. <span style="color:var(--pencil)">Paper and ink. A notebook walk-through. One highlight on the part that matters.</span></p>
+
+  <section>
+    <h2>Colors</h2>
+    <div class="grid g4">
+      <div><div class="sw" style="background:var(--paper)"></div><div class="sw-name">Paper</div><div class="mono">#F7F7F5</div><div class="sw-use">Every background</div></div>
+      <div><div class="sw" style="background:var(--ink)"></div><div class="sw-name">Ink</div><div class="mono">#111111</div><div class="sw-use">All text and strokes</div></div>
+      <div><div class="sw" style="background:var(--pencil)"></div><div class="sw-name">Pencil</div><div class="mono">#6B6B6B</div><div class="sw-use">Captions, labels, secondary text</div></div>
+      <div><div class="sw" style="background:var(--marker)"></div><div class="sw-name">Marker</div><div class="mono">#FFD43B</div><div class="sw-use">The signature. Behind key words only</div></div>
+    </div>
+    <div class="grid g4" style="margin-top:20px">
+      <div><div class="sw" style="background:var(--rest)"></div><div class="sw-name">Side A</div><div class="mono">#C4501B</div><div class="sw-use">Your first side, e.g. the physical business: books, cash, staff. Also warnings</div></div>
+      <div><div class="sw" style="background:var(--rest-tint)"></div><div class="sw-name">Side A tint</div><div class="mono">#F6E3D8</div><div class="sw-use">Side A boxes and panels</div></div>
+      <div><div class="sw" style="background:var(--agency)"></div><div class="sw-name">Side B</div><div class="mono">#2251D1</div><div class="sw-use">Your second side, e.g. the digital work: ads, reports, sites</div></div>
+      <div><div class="sw" style="background:var(--agency-tint)"></div><div class="sw-name">Side B tint</div><div class="mono">#DDE5FA</div><div class="sw-use">Side B boxes and panels</div></div>
+    </div>
+    <div class="grid g2" style="margin-top:28px">
+      <div class="card">
+        <div class="do">DO</div>
+        <ul class="rules" style="margin-top:12px">
+          <li>One marker highlight per slide or thumbnail.</li>
+          <li>Side colors only mean their side. Side A is always terracotta, side B is always cobalt. One side only? Use terracotta for warnings and drop cobalt.</li>
+          <li>White text on side colors, ink text on their tints.</li>
+          <li>Flat color. Lots of paper.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="dont">DON'T</div>
+        <ul class="rules" style="margin-top:12px">
+          <li>Yellow text, or a whole yellow slide.</li>
+          <li>Your company's brand colors, if this personal brand is separate from it.</li>
+          <li>Dark navy "AI channel" backgrounds, gradients, neon, glows beyond the two canvas glows.</li>
+          <li>Side colors as decoration.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Type</h2>
+    <div class="grid g3">
+      <div class="card"><div class="label">Display · Bricolage Grotesque 800</div><div class="spec" style="margin-top:18px">I run a business</div></div>
+      <div class="card"><div class="label">Body · Bricolage Grotesque 400 / 500</div><p style="margin-top:18px;font-size:22px">Every invoice needs its receipt. The AI checks every week and tells me what's missing.</p></div>
+      <div class="card"><div class="label">Mono · JetBrains Mono 500</div><p class="mono" style="margin-top:18px;font-size:22px">12 skills · 40 notes<br>8:12 am · 21 of 46</p></div>
+    </div>
+    <div class="card" style="margin-top:20px"><div class="label">Accent · Instrument Serif Italic · hook line, title, CTA word only</div><div class="serif" style="margin-top:14px;font-size:clamp(36px, 5vw, 64px);line-height:1.05">Run your own campaigns the way you like them.</div></div>
+    <p style="margin-top:16px;color:var(--pencil)">Diagrams use Excalifont, Excalidraw's hand-drawn font. Headlines are sentence case. No em dashes.</p>
+  </section>
+
+  <section>
+    <h2>Two sides, two colors</h2>
+    <div class="grid g2">
+      <div class="mini"><div><span class="tag r">Side A</span></div><div class="h">No receipt, <mark>no entry.</mark></div><div class="label" style="text-transform:none;letter-spacing:.04em">a real count goes here</div></div>
+      <div class="mini"><div><span class="tag a">Side B</span></div><div class="h">Replies in <mark>one hour.</mark></div><div class="label" style="text-transform:none;letter-spacing:.04em">what the number measures</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Studio canvas</h2>
+    <div class="studio">
+      <div style="left:7.5cqw;top:7.8cqw;font-size:1.9cqw;font-weight:500;color:var(--pencil)">In this video</div>
+      <div class="serif" style="left:7.5cqw;top:10.2cqw;font-size:6.2cqw;line-height:1.05;white-space:nowrap">AI checks my <mark>books.</mark></div>
+      <div class="float" style="left:50cqw;top:24cqw;width:42.5cqw;height:26cqw;padding:3cqw">
+        <div style="font-weight:800;font-size:4.2cqw;line-height:1;letter-spacing:-.02em">The free kit</div>
+        <div style="margin-top:1cqw;font-size:1.8cqw;font-weight:500;color:var(--pencil)">Everything from this video</div>
+        <div class="mono" style="margin-top:3cqw;font-size:1.9cqw;line-height:1.7">README.md<br>SETUP.md<br>CLAUDE.md</div>
+      </div>
+    </div>
+    <ul class="rules" style="margin-top:20px">
+      <li>Long-form intros. Paper with two soft still glows: side A bottom-left, side B bottom-right. Video canvas only; slides, diagrams and thumbnails stay flat.</li>
+      <li>Cards float white on it: radius 28 px at 1920, a 1 px line edge, one soft long shadow. The camera is a card too; full-screen talking beats stay uncropped.</li>
+      <li>Instrument Serif Italic for one job: the hook line word by word, the episode title, the CTA word. Mono only for real strings.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Diagrams</h2>
+    <img class="diagram" src="diagrams/sample-context-desk.png" alt="Excalidraw diagram in brand colors"
+         onerror="this.outerHTML='<div class=&quot;card&quot;>Diagram renders here once diagrams/sample-context-desk.png exists (node diagrams/render.mjs diagrams/sample-context-desk.excalidraw).</div>'" />
+    <ul class="rules" style="margin-top:20px">
+      <li>Real Excalidraw files in <span class="mono">brand-system/diagrams/</span>. Edit at excalidraw.com, export with <span class="mono">render.mjs</span>.</li>
+      <li>Paper background, ink strokes, Excalifont. Side A boxes terracotta, side B boxes cobalt, everything else white.</li>
+      <li>Marker yellow marks the one thing to look at. Labels: four words or fewer.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Thumbnails and channel art</h2>
+    <ul class="rules">
+      <li>Paper background, your face from the actual video, at most four words in Bricolage 800.</li>
+      <li>One marker highlight on the word that matters. One side tag (side A or side B) when the video is about one side.</li>
+      <li>Templates: <span class="mono">brand-system/templates/</span> · thumbnail 1280x720 · banner 2560x1440 · IG cover 1080x1920 · X article cover 1500x600.</li>
+    </ul>
+  </section>
+
+</div>
+</body>
+</html>

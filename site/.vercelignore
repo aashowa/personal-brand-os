@@ -1,0 +1,6 @@
+.env*
+.vercel
+publish.py
+library.json
+library.example.json
+index.template.html

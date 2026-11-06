@@ -1,0 +1,44 @@
+# privacy_scan.py terms. One per line, case-insensitive. A plain word is a substring match ("acme" matches
+# "@ACMESTORE"); "a b" is consecutive words; "re:" a regex on one word; "line:" a regex that blurs the whole text line.
+# Lines starting with # are comments.
+#
+# Copy this file to the episode as terms.txt, then add YOUR terms below. The rules further down cover the generic
+# categories (phone numbers, IDs, links with IDs, addresses, emails, API keys and tokens); names are always yours to add:
+#   - every client, customer, partner or private project that can show on screen (one line each; a folder of client
+#     names is a good source), plus common misspellings OCR may produce
+#   - people's names that are not yours
+#   - your computer's username, which shows in file paths, address bars and terminal prompts
+#   - revenue, balances or other private numbers you don't want shown, e.g.
+#     line:(?i)\b(revenue|balance|payout|net sales)\b
+# Skip your own public brands and their public contact address: they stay visible.
+#
+# --- your terms ---
+# acmebakery
+# jane doe
+# yourusername
+#
+# --- generic rules ---
+# account / customer IDs, phone numbers
+re:\d{3}-\d{3}-\d{4}
+# links carrying IDs (Maps place, Drive folders, booking ids)
+re:(google\.com/maps|drive\.google|/folders/|usp=sharing|[?&](pid|lid|plid)=|0x[0-9a-f]{8,})
+# example: an online-ordering link that carries a location ID (uncomment or add your own platform's)
+# re:toasttab\.com/online
+# street addresses and postal codes (whole line; the postal code rule is the Canadian format, add your country's)
+line:\b\d+\s+\w+\s+(St|Street|Rd|Road|Ave|Avenue|Blvd|Dr|Drive|Way|Cres|Crescent)\b
+line:\b[A-Z]\d[A-Z]\s?\d[A-Z]\d\b
+# emails (a public info@ address stays visible)
+re:^(?!info@)[\w.+-]+@[\w-]+\.[a-z]{2,}
+# API keys, full or partly masked (the dots OCR as noise): blur the whole line holding a key prefix or a hex id
+line:(^|\s)(sk|pk|rk|hnk|api|key)[-_]\w{3,}
+line:(^|\s)(?=\S*\d)(?=\S*[a-f])[0-9a-f¢]{8,}(\s|$)
+# labelled IDs, even truncated ("AppID: ..." on developer app cards): blur the labelled line
+line:(?i)\b(app|client|realm|company|workspace|account)\s*[il1]d\s*:
+# any visual line holding an account ID (ad-platform account switchers list client name + ID on one line)
+line:\d{3}-\d{3}-\d{4}
+# street addresses with a multi-word street name ("123 Old Mill Rd")
+line:\b\d+\s+(\w+\s+){1,3}(St|Street|Rd|Road|Ave|Avenue|Blvd|Dr|Drive|Way|Cres|Crescent)\b
+# OCR reads a monospace UUID's hyphens as em/en dashes, so these rules take any dash (also catches GUID fragments
+# split across lines)
+re:[0-9a-f]{8}[-—–]+[0-9a-f]{4}
+re:[0-9a-f]{4}[-—–]+[0-9a-f]{12}

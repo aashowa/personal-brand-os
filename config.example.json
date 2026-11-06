@@ -1,0 +1,63 @@
+{
+  "creator": {
+    "name": "Your Name",
+    "handle": "@yourhandle",
+    "site_url": "https://example.com",
+    "timezone": "America/New_York",
+    "email": "you@example.com"
+  },
+  "schedule": {
+    "reel": {"days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"], "time": "12:00"},
+    "episode": {"days": ["tue"], "time": "10:00"},
+    "linkedin": {"days": ["tue", "wed", "thu"], "time": "12:00"},
+    "facebook_time": "18:00",
+    "reminder_list": "Content"
+  },
+  "youtube": {
+    "channel_handle": "@yourhandle",
+    "description_footer": [
+      "Every free file from my videos: https://example.com/?src=yt",
+      "Subscribe: https://www.youtube.com/@yourhandle?sub_confirmation=1"
+    ],
+    "default_tags": ["AI for business"],
+    "category_id": "27"
+  },
+  "ghl": {"user_email": "you@example.com"},
+  "instagram": {"username": "yourhandle"},
+  "growth": {
+    "goals": [{"from": "2026-01-01", "by": "2026-03-31", "targets": {"instagram": [0, 1000], "youtube": [0, 100]}}]
+  },
+  "site": {
+    "description": "Every free file, template and tool from my videos, in one place.",
+    "photo": "photo.jpg",
+    "socials": {
+      "YouTube": "https://www.youtube.com/@yourhandle",
+      "Instagram": "https://www.instagram.com/yourhandle",
+      "TikTok": "https://www.tiktok.com/@yourhandle"
+    },
+    "chips": {"general": ["chip", "For everyone"], "business": ["chip a1", "Business"], "creator": ["chip a2", "Creator"]}
+  },
+  "drive": {"shorts_folder_id": null, "gws_config_dir": null},
+  "heygen": {
+    "voice_id": "your-voice-clone-id",
+    "brand_glossary_id": null,
+    "avatars": {
+      "a": {"id": "your-avatar-look-id", "cam_y": "40%", "real_mouth": false, "still": "brand-system/avatars/a.jpg"}
+    },
+    "legacy": {},
+    "paused": [],
+    "pin": null,
+    "caption_fixes": {}
+  },
+  "linkedin": {"scene_avatar": "a"},
+  "episode_shorts": {
+    "output_dir": "episodes/<slug>/shorts/",
+    "cta": "Follow me and comment \"WORD\", and I'll send it to you directly"
+  },
+  "radar": {
+    "subreddits": {"ai": ["ClaudeAI", "ChatGPT"], "business": ["smallbusiness", "Entrepreneur"]},
+    "youtube_queries": ["claude code", "new ai tool"],
+    "x_queries": ["new AI tool", "claude code skill"]
+  },
+  "notion": {"pipeline_url": null}
+}
